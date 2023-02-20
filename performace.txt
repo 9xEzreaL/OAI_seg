@@ -1,0 +1,18 @@
+
+local 2:(tmux 1) --[0, 1]
+    train with pretrained v2 for 90 epochs
+    epoch 1 eval : acc=0.983, dice_1=0.99, dice_2=0.935, dice_3=0.864, dice_4=0.969, dice_5=0.826
+
+local 1:(tmux 2) --[0, 1]
+    train without pretrain
+    epoch 1 eval : acc=0.986, dice_1=0.992, dice_2=0.953, dice_3=0.864, dice_4=0.966, dice_5=0.823
+
+local 2:(tmux 1) --[1, -1]
+    train with pretrained v2 for 90 epochs
+    epoch eval 1 : acc=0.981, dice_1=0.989, dice_2=0.939, dice_3=0.867, dice_4=0.946, dice_5=0.822
+    epoch eval 3 : acc=0.986, dice_1=0.992, dice_2=0.956, dice_3=0.874, dice_4=0.963, dice_5=0.832
+
+local 1:(tmux 2) --[1, -1]
+    train without pretrain
+    epoch eval 1 : acc=0.981, dice_1=0.989, dice_2=0.931, dice_3=0.861, dice_4=0.956, dice_5=0.818
+    epoch eval 3 : acc=0.986, dice_1=0.992, dice_2=0.947, dice_3=0.865, dice_4=0.972, dice_5=0.819
